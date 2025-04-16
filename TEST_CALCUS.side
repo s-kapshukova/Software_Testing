@@ -1,0 +1,295 @@
+{
+  "id": "c9542bfb-28d9-4243-9903-12093942a372",
+  "version": "2.0",
+  "name": "TEST_CALCUS ",
+  "url": "https://calcus.ru/random-number",
+  "tests": [{
+    "id": "45ab2678-7bde-4d2a-baa3-d6981f257429",
+    "name": "Проверка перехода по логотипу",
+    "commands": [{
+      "id": "b0937755-3db9-4a2c-939b-5e3e055dd242",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "78036fed-bfdf-4eaf-99fb-37858bb6944c",
+      "comment": "",
+      "command": "click",
+      "target": "css=.d-none > img",
+      "targets": [
+        ["css=.d-none > img", "css:finder"],
+        ["xpath=//a/img", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "0f0277f4-c308-4ee9-a417-bba5991e53d3",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Онлайн калькуляторы, конвертеры и полезные инструменты')]", "xpath:innerText"]
+      ],
+      "value": "Онлайн калькуляторы, конвертеры и полезные инструменты"
+    }]
+  }, {
+    "id": "2ac6df42-c942-4624-a8cd-67cec7185efc",
+    "name": "Проверка наличия кнопки генерации",
+    "commands": [{
+      "id": "f1570138-ad86-494a-b513-ac0984cae26f",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "612f7d02-20c8-4a3b-a052-3d7983cbf929",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "css=.calc-submit",
+      "targets": [
+        ["css=.calc-submit", "css:finder"],
+        ["xpath=//input[@value='Генерировать']", "xpath:attributes"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "6e2bc237-a8a4-4c8c-a253-a19dd3e9e58f",
+    "name": "Проверка наличия поля \"Количество чисел\"",
+    "commands": [{
+      "id": "0cad9941-c1d4-431c-89e5-728fa566a01e",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "7e262541-08ca-41bb-9284-1986c8a59d71",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=qty",
+      "targets": [
+        ["name=qty", "name"],
+        ["css=.calc-frow:nth-child(2) .calc-input > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='qty']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "1"
+    }]
+  }, {
+    "id": "a8ecb23b-13ce-4f85-937a-47b68c81752b",
+    "name": "Проверка наличия полей \"Из диапазона\"",
+    "commands": [{
+      "id": "1c54233d-5310-432e-83dc-f28183453e3a",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "029ad01a-a15b-4dc1-9669-0880ccf3f594",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=range_start",
+      "targets": [
+        ["name=range_start", "name"],
+        ["css=.calc-frow:nth-child(3) .calc-input:nth-child(1) > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='range_start']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "1"
+    }, {
+      "id": "be4e3d78-623d-4a3b-8916-0fae3478b7a8",
+      "comment": "",
+      "command": "assertElementPresent",
+      "target": "name=range_end",
+      "targets": [
+        ["name=range_end", "name"],
+        ["css=.calc-input:nth-child(3) > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='range_end']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "100"
+    }]
+  }, {
+    "id": "f6d0c064-4d2b-4c80-acde-848b66cdab2d",
+    "name": "Проверка перехода в другой калькулятор",
+    "commands": [{
+      "id": "37f30263-42a7-4b50-ab5f-41faf568b91e",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "5262e4a1-ec37-452d-8ffa-914027b98d7a",
+      "comment": "",
+      "command": "click",
+      "target": "linkText=Генератор QR кодов",
+      "targets": [
+        ["linkText=Генератор QR кодов", "linkText"],
+        ["css=.sidebar-item:nth-child(2) > a", "css:finder"],
+        ["xpath=//a[contains(text(),'Генератор QR кодов')]", "xpath:link"],
+        ["xpath=//a[contains(@href, '/qr-code-generator')]", "xpath:href"],
+        ["xpath=//div[2]/div[2]/a", "xpath:position"],
+        ["xpath=//a[contains(.,'Генератор QR кодов')]", "xpath:innerText"]
+      ],
+      "value": ""
+    }, {
+      "id": "a73fae7e-ad47-422e-a286-eb45933ae3fc",
+      "comment": "",
+      "command": "assertText",
+      "target": "css=h1",
+      "targets": [
+        ["css=h1", "css:finder"],
+        ["xpath=//h1", "xpath:position"],
+        ["xpath=//h1[contains(.,'Генератор QR кодов')]", "xpath:innerText"]
+      ],
+      "value": "Генератор QR кодов"
+    }]
+  }, {
+    "id": "65f08036-f9f5-48d8-b003-3bac4747e10d",
+    "name": "Проверка расчёта при корректных данных",
+    "commands": [{
+      "id": "fd051d50-21ea-4911-83f2-a28106d7ed95",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "cdf28826-db7a-46f0-a5f1-6ef23b837e60",
+      "comment": "",
+      "command": "click",
+      "target": "name=qty",
+      "targets": [
+        ["name=qty", "name"],
+        ["css=.calc-frow:nth-child(2) .calc-input > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='qty']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "3eb1b79f-cd13-40e2-a131-eeeafb93e1fd",
+      "comment": "",
+      "command": "type",
+      "target": "name=qty",
+      "targets": [
+        ["name=qty", "name"],
+        ["css=.calc-frow:nth-child(2) .calc-input > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='qty']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "5"
+    }, {
+      "id": "07cf48ce-3c18-4433-919d-78fb7aab7889",
+      "comment": "",
+      "command": "type",
+      "target": "name=range_start",
+      "targets": [
+        ["name=range_start", "name"],
+        ["css=.calc-frow:nth-child(3) .calc-input:nth-child(1) > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='range_start']", "xpath:attributes"],
+        ["xpath=//div[3]/div[2]/div/input", "xpath:position"]
+      ],
+      "value": "-50"
+    }, {
+      "id": "2e756a2d-6fab-4a80-9b92-04d98c4d26c3",
+      "comment": "",
+      "command": "type",
+      "target": "name=range_end",
+      "targets": [
+        ["name=range_end", "name"],
+        ["css=.calc-input:nth-child(3) > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='range_end']", "xpath:attributes"],
+        ["xpath=//div[2]/input", "xpath:position"]
+      ],
+      "value": "50"
+    }, {
+      "id": "ed1feb10-ac52-4a18-91d6-9be5543111bb",
+      "comment": "",
+      "command": "click",
+      "target": "css=.calc-submit",
+      "targets": [
+        ["css=.calc-submit", "css:finder"],
+        ["xpath=//input[@value='Генерировать']", "xpath:attributes"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }, {
+    "id": "40b5eac7-e311-4336-8824-c6d4f839df07",
+    "name": "Проверка расчёта при 0 в \"Количестве чисел\"",
+    "commands": [{
+      "id": "9900c9a3-2f1c-452f-8b39-b2f58961ff98",
+      "comment": "",
+      "command": "open",
+      "target": "https://calcus.ru/random-number",
+      "targets": [],
+      "value": ""
+    }, {
+      "id": "28bc95ca-a643-42ec-82c1-de1a656e6ba2",
+      "comment": "",
+      "command": "click",
+      "target": "name=qty",
+      "targets": [
+        ["name=qty", "name"],
+        ["css=.calc-frow:nth-child(2) .calc-input > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='qty']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": ""
+    }, {
+      "id": "a1f4e45e-36e3-4f39-b7fd-8b63f52eaa07",
+      "comment": "",
+      "command": "type",
+      "target": "name=qty",
+      "targets": [
+        ["name=qty", "name"],
+        ["css=.calc-frow:nth-child(2) .calc-input > .calc-inp", "css:finder"],
+        ["xpath=//input[@name='qty']", "xpath:attributes"],
+        ["xpath=//input", "xpath:position"]
+      ],
+      "value": "0"
+    }, {
+      "id": "cc11c6a8-19dc-49db-9ecb-0b93bc052896",
+      "comment": "",
+      "command": "click",
+      "target": "css=.calc-submit",
+      "targets": [
+        ["css=.calc-submit", "css:finder"],
+        ["xpath=//input[@value='Генерировать']", "xpath:attributes"],
+        ["xpath=//div[5]/div/input", "xpath:position"]
+      ],
+      "value": ""
+    }]
+  }],
+  "suites": [{
+    "id": "0f1868bd-0ad3-4ec1-a344-56de1c122eac",
+    "name": "Проверка наличия элементов",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["2ac6df42-c942-4624-a8cd-67cec7185efc", "6e2bc237-a8a4-4c8c-a253-a19dd3e9e58f", "a8ecb23b-13ce-4f85-937a-47b68c81752b"]
+  }, {
+    "id": "ddbc3413-b682-4972-ad01-4f24b0e60e75",
+    "name": "Проверка переходов по ссылкам",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["45ab2678-7bde-4d2a-baa3-d6981f257429", "f6d0c064-4d2b-4c80-acde-848b66cdab2d"]
+  }, {
+    "id": "5672ac4d-ce10-42e8-bcd9-c10ef6102590",
+    "name": "Проверка расчёта при заданных значениях",
+    "persistSession": false,
+    "parallel": false,
+    "timeout": 300,
+    "tests": ["65f08036-f9f5-48d8-b003-3bac4747e10d", "40b5eac7-e311-4336-8824-c6d4f839df07"]
+  }],
+  "urls": ["https://calcus.ru/", "https://calcus.ru/random-number"],
+  "plugins": []
+}
